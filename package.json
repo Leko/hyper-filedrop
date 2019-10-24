@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "The Hyper plugin that Inserts file path when a file was dropped in Hyper terminal",
   "main": "dist/index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "jest",
     "prepare": "babel index.jsx -o index.js"
