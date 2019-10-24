@@ -1,6 +1,6 @@
 # hyper-filedrop
 
-The Hyper plugin that Inserts file path when a file was dropped in Hyper terminal.
+The Hyper plugin that inserts file path when a file was dropped on the terminal.
 
 ![](https://github.com/Leko/hyper-filedrop/raw/master/demo.gif)
 
