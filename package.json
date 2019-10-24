@@ -1,7 +1,7 @@
 {
   "name": "hyper-filedrop",
   "version": "0.0.0",
-  "description": "The Hyper plugin that Inserts file path when file was dropped",
+  "description": "The Hyper plugin that Inserts file path when a file was dropped in Hyper terminal",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
