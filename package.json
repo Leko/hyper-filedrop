@@ -1,0 +1,26 @@
+{
+  "name": "hyper-filedrop",
+  "version": "0.0.0",
+  "description": "The Hyper plugin that Inserts file path when file was dropped",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "babel index.jsx -o index.js"
+  },
+  "repository": "Leko/hyper-filedrop.git",
+  "keywords": [
+    "hyper",
+    "hyper.app",
+    "hyper-plugin"
+  ],
+  "author": "Leko <leko.noor@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {}
+}
