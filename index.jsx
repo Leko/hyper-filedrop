@@ -1,5 +1,19 @@
 const { remote } = require("electron")
 
+exports.mapTermsDispatch = (dispatch, map) => ({
+  ...map,
+  onDropFile(_, uid, file) {
+    map.onData(uid, file.path)
+  }
+})
+
+const passProps = (uid, parentProps, props) => ({
+  ...props,
+  onDropFile: (...args) => parentProps.onDropFile(uid, ...args)
+})
+exports.getTermGroupProps = passProps
+exports.getTermProps = passProps
+
 exports.decorateTerm = (Term, { React }) =>
   class extends React.Component {
     preventDefault = e => {
@@ -7,9 +21,8 @@ exports.decorateTerm = (Term, { React }) =>
     }
 
     handleDrop = e => {
-      const { term } = this.props
       remote.getCurrentWindow().focus()
-      term.write(e.dataTransfer.files[0].path)
+      this.props.onDropFile(e.dataTransfer.files[0])
     }
 
     render() {
