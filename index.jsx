@@ -3,7 +3,7 @@ const { remote } = require("electron")
 exports.mapTermsDispatch = (dispatch, map) => ({
   ...map,
   onDropFile(_, uid, file) {
-    map.onData(uid, file.path)
+    map.onData(uid, file.path.replace(/( |')/g, "\\$1"))
   }
 })
 
